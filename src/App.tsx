@@ -163,15 +163,44 @@ export default function App() {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"
+          className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-4"
         >
-          <div>
+          {/* Mobile Logo */}
+          <div className="md:hidden w-full flex justify-center sm:justify-start">
+            <img 
+              src="/logo.png" 
+              alt="Institution Logo" 
+              className="h-12 sm:h-16 object-contain"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/mof/600/120';
+              }}
+            />
+          </div>
+
+          <div className="flex-1">
             <h1 className="text-4xl font-semibold tracking-tight text-gray-900">MOF Screener</h1>
             <p className="text-gray-500 mt-2 text-lg">Predict Working Uptake Gravimetric & Volumetric</p>
+            <p className="text-xs text-gray-500/80 mt-3 font-medium leading-relaxed max-w-2xl">
+              <span className="text-gray-400">Created by:</span> Naufal Fawwaz D., Moh. Farid Muktafa, Rama Oktavian, S.T., M.Sc., Ph.D., Dr. Mar’atul Fauziyah, S.T.
+            </p>
           </div>
-          <div className="flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-gray-200 shadow-sm">
-            <Info className="w-5 h-5 text-blue-500" />
-            <span className="text-sm font-medium text-gray-700">DOE Targets: 5.5 wt% & 40 g/L</span>
+          
+          <div className="flex flex-col items-start md:items-end gap-3 w-full md:w-auto">
+            {/* Desktop Logo */}
+            <div className="hidden md:block">
+              <img 
+                src="/logo.png" 
+                alt="Institution Logo" 
+                className="h-14 object-contain"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/mof/600/120';
+                }}
+              />
+            </div>
+            <div className="flex items-center gap-2 bg-white/50 px-4 py-2 rounded-full border border-gray-200 shadow-sm w-fit">
+              <Info className="w-5 h-5 text-blue-500 shrink-0" />
+              <span className="text-sm font-medium text-gray-700">DOE Targets: 5.5 wt% & 40 g/L</span>
+            </div>
           </div>
         </motion.div>
 
