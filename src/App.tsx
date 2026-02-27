@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Activity, Beaker, Layers, Maximize, Ruler, Weight, Box, CheckCircle2, XCircle, Info } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, Cell } from 'recharts';
+import logo from './logo.png';
 
 type Inputs = {
   gsa: number;
@@ -168,8 +169,8 @@ export default function App() {
           {/* Mobile Logo */}
           <div className="md:hidden w-full flex justify-center sm:justify-start">
             <img 
-              src="/logo.png" 
-              alt="Institution Logo" 
+              src={logo} 
+              alt="Logo" 
               className="h-12 sm:h-16 object-contain"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://picsum.photos/seed/mof/600/120';
@@ -181,7 +182,7 @@ export default function App() {
             <h1 className="text-4xl font-semibold tracking-tight text-gray-900">MOF Screener</h1>
             <p className="text-gray-500 mt-2 text-lg">Predict Working Uptake Gravimetric & Volumetric</p>
             <p className="text-xs text-gray-500/80 mt-3 font-medium leading-relaxed max-w-2xl">
-              <span className="text-gray-400">Created by:</span> Naufal Fawwaz D., Moh. Farid Muktafa, Rama Oktavian, S.T., M.Sc., Ph.D., Dr. Mar’atul Fauziyah, S.T.
+              <span className="text-gray-400"></span> Naufal Fawwaz D., Moh. Farid Muktafa, Rama Oktavian, S.T., M.Sc., Ph.D., Dr. Mar’atul Fauziyah, S.T.
             </p>
           </div>
           
@@ -189,7 +190,7 @@ export default function App() {
             {/* Desktop Logo */}
             <div className="hidden md:block">
               <img 
-                src="/logo.png" 
+                src={logo} 
                 alt="Institution Logo" 
                 className="h-14 object-contain"
                 onError={(e) => {
@@ -374,7 +375,7 @@ export default function App() {
           transition={{ delay: 0.4 }}
           className="text-center pt-8 pb-4 text-gray-500 text-sm font-medium"
         >
-          Copyright Farid Naufal 2026
+          Copyright 2026
         </motion.div>
       </div>
       </div>
