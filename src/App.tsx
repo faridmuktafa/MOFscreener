@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Activity, Beaker, Layers, Maximize, Ruler, Weight, Box, CheckCircle2, XCircle, Info } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, Cell } from 'recharts';
-import logo from './logo.png';
+import logo from '/logo.png';
 
 type Inputs = {
   gsa: number;
